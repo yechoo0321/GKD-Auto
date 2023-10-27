@@ -1,0 +1,64 @@
+{
+"id": 0,
+"name": "App自动签到",
+"version": 1,
+"author": "yechoo0321",
+"supportUri": "https://github.com/yechoo0321/GKD-Auto",
+"apps": [
+    {
+      "id": "com.cn21.ecloud",
+      "name": "天翼云盘",
+      "groups": [
+        {
+          "key": 1,
+          "name": "我的界面自动签到",
+          "desc": "在我的界面自动进入签到",
+          "activityIds": ["com.cn21.ecloud.activity.MainPageActivity","com.cn21.ecloud.ui.widget.i0"],
+          "rules": [
+            {
+              "matches": "FrameLayout[id$=\"/content_frame\"] >6 View[desc^=\"每日签到\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698427238656"
+            },
+            {
+              "matches": "[id=\"com.cn21.ecloud:id/raffle_btn\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698428826035"
+            }
+          ]
+          
+        },
+        {
+          "key": 2,
+          "name": "任务界面自动签到",
+          "desc": "在任务界面自动开始领取空间",
+          "activityIds": ["com.cn21.ecloud.activity.webview.WebViewYunYouActivity"],
+          "rules": [
+            {
+              "matches": "View[id=\"task-list-main\"] > @View > TextView[text=\"每日任务\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698429479873"
+            },
+            {
+              "matches": "View[id=\"task-list-main\"] > View[childCount=6] > TextView[text=\"去完成\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698429568208"
+            },
+            {
+              "matches": "TextView[text^=\"你今天还有1\"] - @View[id=\"J_Package\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698430088037"
+            },
+            {
+              "matches": "WebView[text=\"天天抽红包\"] > View > View[childCount=4] > View[desc=\"package_head\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698430749202"
+            },
+            {
+              "matches": "TextView[text=\"开启自动备份\"] < @View[desc=\"开启自动备份\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698431047493"
+            },
+            {
+              "matches": "TextView[text=\"今天还有0次抽红包机会\"] -2 View[childCount=4] < WebView[text=\"天天抽红包\"] < WebView[childCount=1] - FrameLayout[id=\"com.cn21.ecloud:id/top_layout\"] >4 RelativeLayout[id=\"com.cn21.ecloud:id/head_left_rlyt\"]",
+              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698431311583"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
