@@ -37,7 +37,7 @@
           "rules": [
             {
               "matches": "View[id=\"task-list-main\"] > @View > TextView[text=\"每日任务\"]",
-              "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698429479873"
+              "snapshotUrls": "https://gkd-kit.gitee.io/snapshot/1698437037658"
             },
             {
               "matches": "View[id=\"task-list-main\"] > View[childCount=6] > TextView[text=\"去完成\"]",
