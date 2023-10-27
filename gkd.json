@@ -8,8 +8,10 @@
     {
       "id": "com.cn21.ecloud",
       "name": "天翼云盘",
+      "quickFind": true,
       "groups": [
         {
+          "enable": false,
           "key": 1,
           "name": "我的界面自动签到",
           "desc": "在我的界面自动进入签到",
@@ -24,12 +26,13 @@
               "snapshotUrls": "https: //gkd-kit.gitee.io/snapshot/1698428826035"
             }
           ]
-          
+
         },
         {
           "key": 2,
           "name": "任务界面自动签到",
           "desc": "在任务界面自动开始领取空间",
+          "quickFind": true,
           "activityIds": ["com.cn21.ecloud.activity.webview.WebViewYunYouActivity"],
           "rules": [
             {
